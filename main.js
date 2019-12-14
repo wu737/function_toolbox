@@ -272,7 +272,7 @@ ui.zanzhu.click(() => {
 ui.qun.click(() => {
     app.startActivity({
         action: "android.intent.action.VIEW",
-        data: "mqqapi://card/show_pslcard?card_type=group&uin=984523553",
+        data: "mqqapi://card/show_pslcard?card_type=group&uin=952614347",
         packageName: "com.tencent.mobileqq",
     });
 });
@@ -335,6 +335,13 @@ ui.exit.click(() => {
     });
 });
 
+function alipay(code) {
+    app.startActivity({
+        action: "android.intent.action.VIEW",
+        data: "alipayqr://platformapi/startapp?saId=10000007&qrcode=" +
+            "HTTPS://QR.ALIPAY.COM/" + code
+    });
+}
 function QuoteCode(Name) {
     let code = "./lib/" + Name + ".js";
     engines.execScriptFile(code);
