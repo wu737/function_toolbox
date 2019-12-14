@@ -2,7 +2,7 @@
  * @Author: 白酒煮饭 
  * @Date: 2018-11-15 22:56:19 
  * @Last Modified by: QQ:  1641763174
- * @Last Modified time: 2019-12-14 14:46:19
+ * @Last Modified time: 2019-12-14 15:52:54
  */
 "ui";
 
@@ -313,10 +313,10 @@ ui.fen.click(() => {
         .show();
 });
 ui.up.click(() => {
-    app.openUrl("https://www.lanzous.com/b309093");
+    app.openUrl("https://github.com/wu737/function_toolbox");
 });
 ui.up.on("long_click", () => {
-    app.openUrl("https://www.lanzous.com/b309093");
+    app.openUrl("https://github.com/wu737/function_toolbox");
 });
 ui.info.click(() => {
     dialogs.build({
