@@ -2,7 +2,7 @@
  * @Author: 白酒煮饭 
  * @Date: 2018-11-15 22:56:19 
  * @Last Modified by: QQ:  1641763174
- * @Last Modified time: 2019-12-14 15:52:54
+ * @Last Modified time: 2019-12-14 15:59:31
  */
 "ui";
 
@@ -243,8 +243,7 @@ ui.tabs.setupWithViewPager(ui.viewpager);
 ui.list.setDataSource(F_List);
 
 ui.list.on("item_click", function (name) {
-    let code = "./lib/" + name.code + ".js";
-    engines.execScriptFile(code);
+    QuoteCode(name.code)
 });
 ui.me.click(() => {
     app.startActivity({
@@ -336,3 +335,7 @@ ui.exit.click(() => {
     });
 });
 
+function QuoteCode(Name) {
+    let code = "./lib/" + Name + ".js";
+    engines.execScriptFile(code);
+}
